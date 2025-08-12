@@ -1,26 +1,21 @@
-// Varija K
-// 24070123165
+//Varija K
+//24070123165
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int* ptr, b = 10;
-    ptr = &b;
-    cout << *ptr << "    " << b << endl << ptr << "    " << &b << endl;
-    ptr++;
-    cout << "After increment: " << ptr << endl;
+    int a = 10;
+    int *aptr = &a;
 
-    float* n, a = 8.923;
-    n = &a;
-    cout << endl << *n << "    " << a << endl << n << "    " << &a << endl;
-    n++;
-    cout << "After increment: " << n << endl;
+    int arr[] = {10, 20, 30};
+    cout << *arr << endl;  // prints the first element of the array (10)
 
-    char* ch, c = '#';
-    ch = &c;
-    cout << endl << (void*)ch << endl;
-    ch++;
-    cout << "After increment: " << (void*)ch << endl;
+    int *ptr = arr;
+    for (int i = 0; i < 3; i++) {
+        cout << *ptr << endl;
+        ptr++;  // move pointer to the next array element
+    }
 
     return 0;
 }
